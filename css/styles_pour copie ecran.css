@@ -1,0 +1,740 @@
+.box {
+    box-sizing: border-box; /* Opera/IE 8+ */
+    -moz-box-sizing: border-box; /* Firefox, autres Gecko */
+    -webkit-box-sizing: border-box; /* Safari/Chrome, autres WebKit */
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('Raleway.ttf') format('truetype');
+}
+
+@font-face {
+   font-family: 'Raleway-Medium';
+   src: url('Raleway-Medium.ttf') format('truetype');
+}
+
+@font-face {
+   font-family: 'Raleway-Bold';
+   src: url('Raleway-Bold.ttf') format('truetype');
+}
+
+@font-face {
+   font-family: 'Raleway-ExtraBold';
+   src: url('Raleway-ExtraBold.ttf') format('truetype');
+}
+
+/* Styles pour toute la page */
+body {
+   font-family: 'Raleway-Medium';
+}
+
+header, section {
+   width: auto;
+   padding: 0% 0% 0% 2%;
+}
+
+a {
+   color: black;
+   text-decoration: none;
+}
+
+a:visited {
+   color :black
+}
+
+.title-sections {
+   font-family: 'Raleway-ExtraBold';
+   font-size: 22px;
+   margin: 15px 0px 0px 0px;
+}
+
+@media screen and (max-width: 992px) {
+   body {
+      min-width: 770px;
+   }
+}
+
+@media screen and (max-width: 768px) {
+   body {
+      min-width: 320px;
+   }
+   header, section {
+      padding: 0%;
+   }
+}
+
+/* Styles pour le Header */
+#container-header {
+   display: flex;
+   justify-content: space-between;
+}
+#item-logo {
+   line-height: 110px;
+}
+#item-logo img {
+   height: 45px;
+   vertical-align: middle;
+   padding: 20px 0px 0px 60px;
+}
+#item-nav {
+   display: flex;
+   line-height: 107px;
+}
+#item-nav a {
+   text-decoration: none;
+   color: black;
+   padding: 3px 30px 0px 30px;
+}
+#item-nav a:hover {
+   border-top: 3px solid #0065fc;
+   color: #0065fc;
+   padding-top: 0px;
+}
+@media screen and (max-width: 992px) {
+   #item-nav a {
+      padding: 3px 20px 0px 20px;
+   }
+}
+
+@media screen and (max-width: 768px) {
+   #container-header {
+      display: flex;
+      flex-direction: column;
+   }
+   #item-logo {
+      line-height: 80px;
+      text-align: center;
+   }
+   #item-logo img {
+      height: 45px;
+      padding: 0px;
+   }
+   #item-nav {
+      line-height: 50px;
+      margin-right: none;
+   }
+   #item-nav * {
+      flex: 1 1 0;
+      text-align: center;
+   }
+   #item-nav a {
+      padding: 0px 0px 3px 0px;
+   }
+   #item-nav a:hover {
+      border-top: 0px solid;
+      border-bottom: 3px solid #0065fc;
+      padding-bottom: 0px;
+   }
+}
+
+/* Styles pour le titre du formulaire */
+#form-title {
+   font-size: 15px;
+   margin: 15px 0px 20px 0px;
+   font-weight: lighter;
+}
+@media screen and (max-width: 768px) {
+   #form {
+      padding: 20px;
+   }
+}
+
+/* Styles pour la zone de recherche du formulaire */
+#container-search {
+   display: flex;
+   line-height: 50px;
+   text-align: center;
+}
+#item-logo-search {
+   background-color: #f2f2f2;
+   width: 50px;
+   min-width: 50px;
+   height: 50px;
+   border-radius: 15px 0px 0px 15px;
+}
+.form-input input {
+   width: 265px;
+   height: 50px;
+   font-size: larger;
+   font-family: 'Raleway-ExtraBold';
+   padding: 0px 0px 0px 15px;
+   border: 1px solid #f2f2f2;
+}
+.form-submit {
+   text-align: left;
+}
+.form-submit input {
+   position: absolute;
+   left: 300px;
+   width: 140px;
+   height: 50px;
+   color: white;
+   background-color: #0065fc;
+   font-size: larger;
+   font-family: 'Raleway-ExtraBold';
+   border: 0px;
+   border-radius: 0px 15px 15px 0px;
+}
+.form-submit button {
+   display: none;
+   position: absolute;
+   left: 300px;
+   background-color: aquamarine;
+   width: 50px;
+   height: 50px;
+   color: white;
+   background-color: #0065fc;
+   font-size: larger;
+   border: 0px;
+   border-radius: 15px 15px 15px 15px;
+}
+
+/* Styles pour les filtres du formulaire */
+#container-filters {
+   display: flex;
+   flex-wrap: wrap;
+   line-height: 50px;
+   margin: 25px 0px 0px 0px;
+   font-family: 'Raleway-ExtraBold';
+   font-size: large;
+}
+#filters-title {
+   margin: 0px 25px 0px 5px;
+}
+.item-filters {
+   display: flex;
+   margin-right: 20px;
+}
+.filters-logo:hover {
+   color: #deebff;
+   background-color: #0065fc;
+}
+.filters-logo {
+   position: absolute;
+   width: 50px;
+   height: 50px;
+   color: #0065fc;
+   background-color: #deebff;
+   text-align: center;
+   border-radius: 50px;
+}
+.filters-text {
+   height: 44px;
+   margin: 0px 0px 20px 0px;
+   padding: 0px 15px 0px 55px;
+   border-radius: 50px;
+   border: 3px solid #f2f2f2;
+}
+
+@media screen and (max-width: 768px) {
+   .item-filters {
+      margin-right: 10px;
+   }
+   .form-submit input {
+      display: none;
+   }
+   .form-submit button {
+      display: block;
+   }
+   #filters-title {
+      flex-basis: 760px;
+   }
+}
+
+/* Styles pour le point info du formulaire */
+#info {
+   display: flex;
+   margin: 10px 0px 30px 0px;
+}
+#info-logo {
+   color: #0065fc;
+   width: 25px;
+   height: 25px;
+   line-height: 25px;
+   border-radius: 50px;
+   text-align: center;
+   border: 2px solid #f2f2f2;
+}
+#info-text {
+   line-height: 25px;
+   margin: 3px 0px 0px 10px;
+}
+
+/* Styles pour la section Lodgings */
+
+#lodgings {
+   display: flex;
+}
+
+#lodgings h2 {
+   font-family: 'Raleway-Bold';
+   font-size: 22px;
+   margin: 0px
+}
+
+/* Styles pour la section Hébergements à Marseille */
+#lodgings-marseille {
+   background-color: #f2f2f2;
+   border-radius: 20px;
+   margin: 0px 30px 50px 0px;
+   max-width: 900px;
+   padding: 30px 30px 40px 30px;
+}
+#lodgings-cards {
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   margin-top: 25px;
+}
+.card-lodgings {
+   width: 31%;
+   height: 200px;
+   border-radius: 20px;
+   background-color: white;
+   margin-bottom: 30px;
+   box-shadow: 0px 0px 20px #dddddd;
+}
+
+/* Styles pour les cartes Hébergements à Marseille */
+.card-lodgings a {
+   display: flex;
+   flex-direction: column;
+}
+.card-lodgings img {
+   object-fit: cover;
+   width: 96%;
+   height: 110px;
+   border-radius: 15px 15px 0px 0px;
+   margin: 2%
+}
+#lodgings-marseille .card-details {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   height: 68px;
+   padding-left: 7%;
+}
+.card-title {
+   font-family: 'Raleway-Bold';
+}
+.card-lodgings:hover .card-title {
+   color: #0065fc;
+}
+#lodgings-marseille .card-price {
+   font-size: smaller;
+}
+.price {
+   font-weight: bold;
+}
+.card-rate {
+   font-size: 12px;
+}
+.rate-good {
+   color: #0065fc;
+   margin-right: -3px;
+}
+.rate-bad {
+   color: #f2f2f2;
+   margin-right: -3px;
+}
+#show-more {
+   font-family: 'Raleway-Bold';
+   font-size: large;
+   margin-top: 10px;
+}
+
+@media screen and (max-width: 992px) {
+   #lodgings {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column-reverse;
+   }
+   #lodgings-marseille {
+      margin: 0px 0px 30px 0px;
+      padding: 30px;
+   }
+   #show-more {
+      margin-bottom:30px;
+   }
+}
+
+@media screen and (max-width: 768px) {
+   #lodgings-marseille {
+      background-color: white;
+      border-radius: 0px;
+      padding: 20px 20px 0px 20px;
+   }
+   #lodgings-cards {
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin-bottom: 30px;
+   }
+   .card-lodgings {
+      width: 100%;
+      max-width: 340px;
+      margin-bottom: 14px;
+   }
+   #lodgings-marseille .card-details {
+      height: 64px;
+   }
+   #show-more {
+      margin: 0px;
+   }
+}
+
+/* Styles pour la section
+            Les plus populaires */
+#populars {
+   display: flex;
+   flex-direction: column;
+   background-color: #f2f2f2;
+   height: 570px;
+   border-radius: 20px;
+   padding: 30px 30px 0px 30px;
+   max-width: 350px;
+}
+#populars-title {
+   display: flex;
+   justify-content: space-between;
+   font-family: 'Raleway-Bold';
+   font-size: 22px;
+}
+#populars-title-logo img {
+   width: 25px;
+}
+#populars-cards {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   height: 530px;
+   margin: 20px 0px 40px 0px;
+}
+
+.card-populars {
+   height: 140px;
+   width: 340px;
+   border-radius: 20px;
+   background-color: white;
+   box-shadow: 0px 0px 20px #dddddd;
+}
+.card-populars a {
+   display: flex;
+}
+
+.card-populars img {
+   object-fit: cover;
+   width: 130px;
+   height: 130px;
+   border-radius: 15px 0px 0px 15px;
+   margin: 5px;
+}
+#populars .card-details {
+   display: flex;
+   justify-content: space-between;
+   flex-direction: column;
+   padding: 5%
+}
+#populars .card-details .card-title {
+   flex: 0 1 auto;
+}
+#populars .card-details .card-price {
+   flex: 1 0 auto;
+   padding-top: 10px;
+}
+#populars .card-details .card-rate {
+   flex: 0 1 auto;   
+}
+.card-populars:hover .card-title {
+   color: #0065fc;
+}
+#populars .card-price {
+   margin-top: 0px;
+   font-size: smaller;
+   vertical-align: bottom;
+}
+#populars .card-rate {
+   vertical-align: bottom;
+}
+
+@media screen and (max-width: 992px) {
+   #populars {
+      height: auto;
+      margin-bottom: 30px;
+      max-width: 900px;
+      padding: 30px;
+   }
+   #populars-cards {
+      flex-direction: row;
+      justify-content: space-between;
+      height: 230px;
+      margin: 20px 0px 0px 0px
+   }
+   .card-populars {
+      width: 31%;
+      height: 220px;
+      margin: 0;
+   }
+   .card-populars a {
+      flex-direction: column;
+   }
+   .card-populars img {
+      width: 96%;
+      height: 110px;
+      border-radius: 15px 15px 0px 0px;
+      margin: 2%;
+   }
+   #populars .card-details {
+      padding: 0% 0% 0% 5%;
+   }
+}
+
+@media screen and (max-width: 768px) {
+   #populars {
+      height: auto;
+      border-radius: 0px;
+      min-width: 0px;
+      padding: 20px 20px 0px 20px;
+      margin-bottom: 20px;
+   }
+   #populars-cards {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 20px 0px 30px 0px;
+      height: auto;
+   }
+   .card-populars img {
+      width: 130px;
+      height: 130px;
+      border-radius: 15px 0px 0px 15px;
+      margin: 5px
+   }
+   #populars-title {
+      margin: 20px 0px 0px 0px;
+   }   
+   .card-populars {
+      height: 140px;
+      width: 100%;
+      max-width: 340px;
+      margin-bottom: 10px;
+   }
+   .card-populars a {
+      flex-direction: row;
+   }
+   .card-populars img {
+      width: 130px;
+      height: 130px;
+      border-radius: 15px 0px 0px 15px;
+   }
+   #populars .card-details {
+      padding: 3%
+   }
+   .card-populars:hover .card-title {
+      color: #0065fc;
+   }
+   #populars .card-price {
+      font-size: smaller;
+   }
+   #populars .card-details .card-rate {
+      vertical-align: bottom;
+   }
+}
+
+
+/* Styles pour la section Activités */
+#activities {
+   margin-bottom: 50px;
+   max-width: 1390px;
+}
+#activities-title {
+   font-family: 'Raleway-Bold';
+   font-size: 22px;
+   margin-bottom: 20px;
+}
+#activities-cards {
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+}
+#activities-cards > * {
+   flex: 1 1 0;
+}
+#card-old-port {
+   margin-right: 3%;
+}
+#card-calanques-park {
+   margin: 0% 3% 0% 3%;
+}
+.activity-column {
+   display: flex;
+   justify-content: space-between;
+   flex-direction: column;
+}
+#activities-cards .card-activity {
+   border-radius: 20px;
+   box-shadow: 0px 0px 20px #dddddd;
+}
+#activities-cards img {
+   object-fit: cover;
+   border-radius: 20px 20px 0px 0px;
+   width: 100%;
+}
+#activities-cards a:hover {
+   color: #0065fc;
+}
+
+.old-port, .calanques-park {
+   height: 430px;
+}
+.old-port img, .calanques-park img {
+   height: 370px;
+}
+.pomegues-fort {
+   height: 230px;
+}
+.pomegues-fort img {
+   height: 170px;
+}
+.frioul-isles {
+   height: 160px;
+}
+.frioul-isles img {
+   height: 100px;
+}
+.notre-dame {
+   height: 190px;
+}
+.notre-dame img {
+   height: 130px;
+}
+.longchamp-park {
+   height: 200px;
+}
+.longchamp-park img{
+   height: 140px;
+}
+.activity-card-title {
+   font-family: 'Raleway-Bold';
+   margin: 15px 0px 0px 20px;
+}
+
+@media screen and (max-width: 992px) {
+   .old-port, .calanques-park {
+      height: 297px;
+   }
+   .old-port img, .calanques-park img {
+      height: 247px;
+   }
+      .pomegues-fort {
+      height: 163px;
+   }
+      .pomegues-fort img {
+      height: 113px;
+   }
+      .frioul-isles {
+      height: 117px;
+   }
+   .frioul-isles img{
+      height: 67px;
+   }
+   .notre-dame {
+      height: 137px;
+   }
+   .notre-dame img {
+      height: 87px;
+   }
+   .longchamp-park {
+      height: 143px;
+   }
+   .longchamp-park img{
+      height: 93px;
+   }
+   .activity-card-title {
+      margin: 10px 0px 0px 15px;
+   }
+   #card-calanques-park .activity-card-title,
+   #card-notre-dame .activity-card-title {
+      margin: 2px 0px 0px 15px;
+   }
+}
+
+@media screen and (max-width: 768px) {
+   #activities-title {
+      margin-bottom: 30px;
+      padding: 20px 20px 0px 20px;
+   }
+   #activities-cards {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+   }
+   #activities {
+      width: 100%;
+      margin-bottom: 10px;
+   }
+   #activities-cards .card-activity {
+      width: 320px;
+      max-width: 340px;
+      height: 200px;
+      margin-bottom: 30px;
+   }
+   .card-activity img {
+      object-fit: cover;
+      height: 140px;
+   }
+   .activity-card-title {
+      margin: 15px 0px 0px 20px;
+   }
+   #card-old-port {
+      margin-right: 0%;
+   }   
+   #card-calanques-park {
+      margin: 0%;
+   }
+}
+
+/* Styles pour la section Footer */
+footer {
+   background-color: #f2f2f2;
+   padding: 50px 0px 30px 30px;
+}
+
+#container-footer {
+   display: flex;
+}
+
+.footer-item {
+   flex: 1 1 0;
+}
+
+.footer-title {
+   font-family: 'Raleway-Bold';
+   font-size: large;
+   margin-bottom: 20px;
+}
+
+footer ul {
+   list-style: none;
+   padding: 0;
+}
+
+footer li {
+   font-family: 'Raleway';
+   font-size: 16px;
+   margin-bottom: 15px;
+}
+
+@media screen and (max-width: 768px) {
+   footer {
+      padding: 50px 0px 0px 30px;
+   }
+   #container-footer {
+      flex-direction: column;
+   }
+   .footer-item {
+      margin-bottom: 30px;
+   }
+}
